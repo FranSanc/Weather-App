@@ -1,0 +1,64 @@
+body {
+  font-family: "Oswald", sans-serif;
+}
+h1 {
+  color: grey;
+}
+.highlight {
+  background-color: #f0dc68;
+  background-image: linear-gradient(to right, #ede2ab 0%, #fff2ac 100%);
+  color: #ff8800;
+}
+
+.temperature {
+  font-size: 30px;
+  color: grey;
+}
+
+a {
+  font-size: 20px;
+  color: #ff8800;
+}
+
+a:hover {
+  color: blue;
+  transition-duration: 0.4s;
+}
+.btn-success {
+  background-color: #ff8800;
+  border-color: lightgrey;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px lightgrey;
+}
+
+.btn-success:hover {
+  background-color: whitesmoke;
+  color: #ff8800;
+  border-color: #ff8800;
+  transition-duration: 0.4s;
+}
+.main {
+  font-size: 50px;
+  position: relative;
+  left: 20px;
+  bottom: 23px;
+}
+.detail {
+  position: relative;
+  top: 16px;
+  left: 8px;
+  bottom: 26px;
+  text-transform: capitalize;
+}
+i {
+  color: #ff8800;
+}
+.form-control-borderless {
+  color: #ff8800;
+}
+.days {
+  text-align: center;
+}
+.emoji {
+  font-size: 28px;
+}
