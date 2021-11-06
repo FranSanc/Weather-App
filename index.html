@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather app</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <script src="https://kit.fontawesome.com/5db331d10b.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="src/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+  <body>
+    <div class="container">
+      <br />
+      <div>
+            <h1 class="row justify-content-center"> YOUR DAILY FORECAST</h1>
+            </div>
+     <br />
+     <div class="row justify-content-center">
+                        <div class="col-12 col-md-10 col-lg-8">
+                            <form class="card card-sm" id="search-form">
+                                <div class="card-body row no-gutters align-items-center">
+                                    <div class="col-auto">
+            
+                                        <i class="fas fa-search fa-customise" style="font-size:30px;"></i>
+                                  
+                                      </div>
+                        
+                                    <div class="col" >
+                           
+                                        <input class="form-control form-control-lg form-control-borderless" id="search-city" type="search" placeholder="Enter city here">
+                                    
+                                      </div>
+                                  
+                                    <div class="col-auto">
+                                        <button class="btn btn-lg btn-success" type="submit">Search</button>
+                                    </div>
+                                    
+                            </form>
+                            <br/> 
+                            <div class="col-auto">
+                                      <button type="button" class="btn btn-outline-info" id="current-location-button">Current Location</button>
+                                  </div>
+                            <br/>
+                            <br/>
+                              <br/>
+                            <br/>
+                  
+                    <div class="container">
+         
+  <div class="row p-3 shadow-sm bglight rounded">
+    <div class="col-5">
+      <h2 id="city"> 
+     LONDON
+     </h2>
+     <div class="col">
+       
+     </div>
+     <div class="col">
+      <span class="highlight" id="current-time-date"></span>
+       </span>
+     </div>
+    </div>
+    <div class="col-4">
+      <span class="temperature" id="temp"></span>
+    
+      <br>
+      <br>
+    </div>
+    <div class="col-3">
+
+     <div class="col-12">
+       <small> 
+<span class="detail" id="description"></span>
+</small>
+     </div>
+    </div>
+          </div>
+<div class="container p-3">
+  <div class="row gap-3 d-flex flex-row bd-highlight mb-3">
+    <div class="col p-3 bg-light border shadow-sm">
+      <span class= "days"> 
+      <h6> 
+        <strong> 
+      MON 
+       </strong>
+       <br>
+       <small> 
+       <span class="highlight">11/10</span>
+      </small>
+      </h6>
+      <div class="col">
+        <strong> 
+       21°
+       </strong>
+       |14°
+       </div>
+       <div class="col">
+         <span class="emoji">
+         <figure class="text-center p-2"> ⛅ </figure>
+     </span>
+        </span>
+        </div>
+    </div>
+
+    <div class="col p-3 bg-light border shadow-sm">
+       <span class= "days"> 
+      <h6> 
+        <strong> 
+      TUE
+       </strong>
+       <br>
+        <small>
+       <span class="highlight">12/10</span>
+      </small>
+      </h6>
+      <div class="col">
+        <strong> 
+       20°
+       </strong>
+       |12°
+       </div>
+       <div class="col">
+         <span class="emoji">
+       <figure class="text-center p-2"> ⛅ </figure>
+       </span>
+       </span>
+      </div>
+    </div>
+    <div class="col p-3 bg-light border shadow-sm">
+       <span class= "days"> 
+      <h6> 
+        <strong> 
+      WED 
+       </strong>
+       <br>
+       <small>
+       <span class="highlight">13/10</span>
+      </small>
+      </h6>
+      <div class="col">
+        <strong> 
+       22°
+       </strong>
+       |15°
+      <div class="col">
+       </div>
+       
+         <span class="emoji">
+         <figure class="text-center p-2"> 🌧️</figure>
+      </span>
+        </span>
+        </div>
+    </div>
+    <div class="col p-3 bg-light border shadow-sm">
+       <span class= "days"> 
+      <h6> 
+        <strong> 
+      THU
+       </strong>
+       <br>
+       <small>
+      <span class="highlight">14/10</span>
+      </small>
+      </h6>
+      <div class="col">
+        <strong> 
+       22°
+       </strong>
+       |15°
+       </div>
+       <div class="col">
+         <span class="emoji">
+         <figure class="text-center p-2"> 🌩️</figure>
+       </span>
+        </span>
+       </div>
+    </div>
+    <div class="col p-3 bg-light border shadow-sm">
+      <span class= "days"> 
+      <h6> 
+        <strong> 
+      FRI 
+       </strong>
+       <br>
+       <small>
+       <span class="highlight">15/10</span>
+      </small>
+      </h6>
+      <div class="col">
+        <strong> 
+       21°
+       </strong>
+       |14°
+       </div>
+       <div class="col">
+          <span class="emoji">
+         <figure class="text-center p-2">☀️</figure>
+     </span>
+        </span>
+        
+       </div>
+    </div>
+    <script src="src/index.js"></script>
+Open Source by Francesca Sancarlo <a href="http://https://github.com/FranSanc/Fran-s-Weather-App"></a>
+
+  </body>
+</html>
